@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Janala</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/5e9ebfc54c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Daisy UI and Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .pop {
+        font-family: "Poppins", sans-serif;
+      }
+      .inter {
+        font-family: "Inter", sans-serif;
+      }
+      .hind {
+        font-family: "Hind Siliguri", sans-serif;
+      }
+      .active {
+        background-color: #422ad5;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar area -->
+    <header
+      id="header"
+      class="w-full bg-gradient-to-b from-gray-300 to-gray-50 border-b border-gray-200 fixed z-50 hidden"
+    >
+      <nav
+        class="w-11/12 py-5 mx-auto pop flex flex-col md:flex-row gap-2 md:gap-0 items-center justify-between"
+      >
+        <div class="flex items-center">
+          <h1 class="text-xl font-semibold">English</h1>
+          <img src="assets/logo.png" alt="English Janala Logo" />
+          <h1 class="hind text-xl font-medium">জানালা</h1>
+        </div>
+        <div class="flex items-center flex-col md:flex-row gap-4">
+          <div>
+            <button
+              class="px-4 py-1 text-[#422AD5] border border-[#422AD5] hover:text-white hover:bg-[#422AD5] rounded-sm duration-200"
+            >
+              <a href="#faq-sect" class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-question"></i>
+                FAQ
+              </a>
+            </button>
+          </div>
+          <div>
+            <button
+              class="px-4 py-1 text-[#422AD5] border border-[#422AD5] hover:text-white hover:bg-[#422AD5] rounded-sm duration-200"
+            >
+              <a href="#card-sect" class="flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i>
+                Learn
+              </a>
+            </button>
+          </div>
+          <div>
+            <button
+              id="logout"
+              class="px-4 py-1 text-[#422AD5] border border-[#422AD5] hover:text-white hover:bg-[#422AD5] rounded-sm duration-200"
+            >
+              <a href="#" class="flex items-center gap-2">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+              </a>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navarea completed -->
+
+    <main>
+      <!-- hero section starts -->
+      <section id="banner-sect" class="w-11/12 pop mx-auto">
+        <div
+          class="flex flex-col-reverse gap-5 md:gap-0 md:flex-row items-center"
+        >
+          <div class="flex-1 space-y-5">
+            <h1 class="text-5xl font-bold">
+              <span class="text-[#00BCFF]">English</span> is Easy!!!
+            </h1>
+            <p class="hind font-medium text-lg">
+              আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+              <br />
+              আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+              <br />
+              যাবে অন্য একটি Level এ
+            </p>
+            <div class="space-y-5">
+              <input
+                type="text"
+                name=""
+                id="input-name"
+                placeholder="Enter your name"
+                class="h-10 indent-3 border border-gray-300 rounded-sm w-80 focus:outline-4 focus:outline-offset-4 focus:outline-[#422AD5]"
+              /><br />
+              <input
+                type="password"
+                name=""
+                id="input-pass"
+                placeholder="Enter login code (123456)"
+                class="h-10 indent-3 border border-gray-300 rounded-sm w-80 focus:outline-4 focus:outline-offset-4 focus:outline-[#422AD5]"
+              />
+              <br />
+              <button
+                id="login"
+                class="px-6 py-3 text-white bg-[#422AD5] hover:bg-[#170b63] rounded-sm duration-200"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="flex-1">
+            <img src="assets/hero-student.png" alt="Student Picture" />
+          </div>
+        </div>
+      </section>
+      <!-- hero section ends -->
+
+      <!-- vocabulary section starts -->
+      <section id="card-sect" class="py-60 md:pt-24 w-11/12 mx-auto space-y-5 hidden">
+        <span className="loading loading-spinner loading-xl"></span>
+        <h1 class="text-4xl font-bold text-center">
+          <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+        </h1>
+        <div
+          id="btn-container"
+          class="flex items-center justify-center gap-5 flex-wrap"
+        ></div>
+        <div
+          id="card-container"
+          class="bg-[#F8F8F8] p-5 rounded-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <div class="col-span-full text-center space-y-5">
+            <p class="hind text-lg font-medium text-gray-500">
+              আপনি এখনো কোন Lesson Select করেননি।
+            </p>
+            <h1 class="text-3xl hind font-medium">একটি Lesson Select করুন।</h1>
+          </div>
+        </div>
+      </section>
+      <!-- vocabulary section ends -->
+
+      <!-- Loading section -->
+      <section id="load-sect" class="w-11/12 mx-auto rounded-md justify-center bg-[#F8F8F8] py-10 hidden">
+        <span
+          id="loading"
+          class="loading loading-dots loading-xl"
+        ></span>
+      </section>
+      <!-- Loading section ends -->
+
+      <!-- Modal Section Starts -->
+      <section id="modal-sect">
+        <dialog id="wordDetails" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box flex flex-col justify-start">
+            <div>
+              <div class="border-2 border-[#edf7ff] p-3 rounded-md space-y-7">
+                <div class="flex flex-col md:flex-row gap-2">
+                  <h1 id="main-word" class="pop font-bold text-3xl"></h1>
+                  <h1 id="pronun" class="hind font-bold text-3xl"></h1>
+                </div>
+                <div class="space-y-3">
+                  <h1 class="font-semibold text-lg pop">Meaning</h1>
+                  <p id="word-meaning" class="font-medium text-xl hind">}</p>
+                </div>
+                <div class="space-y-3">
+                  <h1 class="font-semibold text-lg pop">Example</h1>
+                  <p
+                    id="word-sent"
+                    class="font-normal text-base pop text-gray-700"
+                  ></p>
+                </div>
+                <div class="space-y-3">
+                  <h1 class="hind font-medium text-lg">সমার্থক শব্দ গুলো</h1>
+                  <div
+                    id="syn-container"
+                    class="flex justify-start flex-col md:flex-row  gap-3"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-action">
+              <form method="dialog" class="w-full">
+                <button
+                  class="px-6 py-2 text-white bg-[#422AD5] hover:bg-[#170b63] rounded-sm duration-200"
+                >
+                  Complete Learning
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
+      <!-- Modal Section Ends -->
+
+      <!-- FAQ Section Starts -->
+      <section
+        id="faq-sect"
+        class="w-11/12 mx-auto py-60 md:py-24 space-y-12 hidden"
+      >
+        <div>
+          <h1 class="text-4xl font-bold text-center">
+            <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+          </h1>
+        </div>
+        <div class="space-y-5">
+          <div class="collapse collapse-plus bg-[#F8F8F8]">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold pop text-base">
+              1. Write the differences between var, let and const.
+            </div>
+            <div class="collapse-content text-sm">
+              <p class="text-base text-gray-600 pop">
+                In Javascript, <i>var, let and const</i> are used for declaring
+                variables. But they have dissimilarities in terms of scope and
+                mutability. <br />
+                <b>Var:</b> <i>var</i> is bascially function scoped or global if
+                declared outside and can be updated and re-declared. We can
+                access var declared variables from outside of an function.
+                <br />
+                <b>let:</b> <i>let</i> is basically block scoped, means that it can
+                only be accessed within the curly braces <i>{}</i>. It can be
+                reassigned but can't be re-declared within the same scope.
+                <br />
+                <b>const:</b> <i>const</i> are block scoped also but can't be
+                <i>reassigned and re-declared.</i> If they are accessed before
+                initialization, referenceError will occur.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8]">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold pop text-base">
+              2. Write the differences between map(), forEach(), and filter().
+            </div>
+            <div class="collapse-content text-sm">
+              <p class="text-gray-600 pop text-base">
+                In Javascript, <i>map()</i>, <i>filter()</i>, and
+                <i>forEach()</i> are array methods for manipulating array.
+                However, their behaviour are quite different from one another
+                while applied in a array. <br />
+                <b>map():</b> <i>map() method</i> always returns a new array after modifying the elements
+                of the original array. map() works on every elements of the original array and
+                after manipulating the elements, it returns them in a new array.
+                This method is used for modifying all elements of an array.
+                <br />
+                <b>filter():</b> <i>filter() method</i> also return a new array
+                but only with the elements that match the requirement. This
+                method is mainly used for filtering data of an array. Based on
+                the condition given, it filters the elements of an array and
+                returns them in a new array. <br />
+                <b>forEach():</b> <i>forEach() method</i> doesn't return
+                anything. It receives some condition as arguments and applied
+                them to each elements of that array. Thus, it returns undefined
+                but only applies the given conditions to each element of the
+                original array.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8]">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold pop text-base">
+              3. Explain arrow functions and how they are different from regular
+              functions.
+            </div>
+            <div class="collapse-content text-sm">
+              <p class="text-gray-600 pop text-base">
+                <b>Arrow Function:</b> Arrow function in Javascript is a shorter
+                way of writing function which is introduced in ECMAScript 6. It
+                allows us to write fucntion code in a more concise and readable
+                way. Unlike regular functions, arrow functions don’t have their
+                own this, but instead, inherit it from the surrounding context.
+                <br />
+                <em>Sample arrow function</em>--
+                <b
+                  ><span style="font-family: monospace"
+                    >let functionName = (parameter) => (function body);</span
+                  ></b
+                >
+                <br />
+                Arrow functions and regular functions in JavaScript serve
+                similar purposes, but they differ in terms of syntax, behavior,
+                use cases and many others. There are certain interesting
+                differences between them as discussed below — <br />
+                <strong>No arguments:</strong> Arrow functions do not have their
+                own arguments object like the regular functions. <br />
+                <strong>Cannot be used as constructors:</strong> Arrow functions
+                cannot be used with the new keyword. <br />
+                <strong>Return Keyword:</strong> Unlike regular functions,
+                return doesn't need to be used in an arrow function if function
+                body consists of one line. <br />
+                These are some of the common differences between regular
+                function and arrow function although there are some more
+                differences between them.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8]">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold pop text-base">
+              4. How JavaScript Promises work?
+            </div>
+            <div class="collapse-content text-sm">
+              <p class="text-gray-600 pop text-base">
+                In JavaScript, a <i>promise</i> is an asynchronous action that
+                may complete at some point and produce a value. Promise simplify
+                the use of asynchronous functions. <br />
+                Moreover, a Promise is an object that represents the eventual
+                completion (or failure) of an asynchronous operation and its
+                resulting value. It can be in one of three states: <br />
+                <strong>1. Pending:</strong> The initial state, neither
+                fulfilled nor rejected. <br />
+                <strong>2. Fulfilled:</strong> The operation completed
+                successfully, and the promise has a resulting value. <br />
+                <strong>3. Rejected:</strong> The operation failed, and the
+                promise has a reason for the failure (typically an error).
+                <br />
+                <strong>Example:</strong> While fetching an api data, a promise
+                is occured and we can use <i>.then</i> for fullfilled promise
+                and <i>.catch</i> for rejected promise. code snippet - <br />
+                <i
+                  >fetch('some api url') <br />
+                  .then(res => res.json()) //a promise that convert the json
+                  data<br />
+                  .then(data => console.log(data)) //used to show the data in
+                  the console<br />
+                  .catch((error) => console.log(error)) //if promise is failed
+                  it will tells us the error.<br />
+                </i>
+                So, in the above example, after fetching the url, a promise is
+                occured in the second line. Thus, in the third and fourth line
+                by <i>chaining</i> them with the .then and .catch. Like this
+                way, promises are made to perform a series of asynchronous
+                operations one after the other. <br />
+                With the introduction of <strong>async</strong> and
+                <strong>await</strong>, working with Promises became even more
+                straightforward, but understanding how Promises work at their
+                core is essential for effective JavaScript programming.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-[#F8F8F8]">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold pop text-base">
+              5. How closures work in JavaScript?
+            </div>
+            <div class="collapse-content text-sm">
+              <p class="text-gray-600 pop text-base">
+                In JavaScript, <i>closure</i> is a function that remembers its
+                outer variables and can access them. <br />
+                <span style="font-family: monospace">
+                  function multiplier(factor) { <br />
+                  return number => number * <i>factor</i>; <br />
+                  } <br />
+                  let twice = <i>multiplier(2)</i>; <br />
+                  console.log(twice(5)); <br />
+                  <b>//output is 10</b>
+                </span>
+                <br />
+                In the above example, <i>multiplier</i> is called and creates
+                an environment in which its <i>factor parameter</i> is bound to
+                2. The function value it returns, which is stored in twice,
+                remebers this environment. So, when that is called, it
+                multiplies its argument by 2. <br />
+                Thus, by remembering its outer variables, function can access
+                them and update them. <br />
+                This is how <strong>closure</strong> is being used and defined
+                in JavaScript.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Section Ends -->
+    </main>
+    <footer id="engFooter" class="border-t-2 border-[#ffebeb] py-7 md:py-14">
+      <div
+        class="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-end"
+      >
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <h1 class="text-xl font-semibold">English</h1>
+            <img src="assets/logo.png" alt="English Janala Logo" />
+            <h1 class="hind text-xl font-medium">জানালা</h1>
+          </div>
+          <h1 class="hind font-semibold text-lg">ইংরেজি শিখুন সহজে</h1>
+          <p class="hind text-sm font-normal">
+            Providing ED-Tech Applications since 2025
+          </p>
+        </div>
+        <div class="space-y-4">
+          <h1 class="text-gray-600 text-base font-medium">FOLLOW US</h1>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/mirulkhan" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
+            <a href="https://www.youtube.com/@mirulmoktadirkhan2127" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="https://github.com/moktadir-mirul" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script/login-out.js"></script>
+    <script src="script/display-words.js"></script>
+  </body>
+</html>
